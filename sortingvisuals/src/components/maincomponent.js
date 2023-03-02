@@ -1,5 +1,4 @@
-import react from 'react'
-
+import React from 'react'
 class Main extends React.Component {
     constructor(props) {
         super(props);
@@ -23,17 +22,16 @@ class Main extends React.Component {
     render() {
         const{array} = this.state;
         return (
-            <>
+
+            <div className="w-100 h-96 justify-center items-end">
             {array.map((value,idx)=>(
-                <div className="array-bar" key={idx}>
-                    
-                    key{idx}
-                    style={{height: `${value}px`}}
-                    
-                 
-                </div>
+                <div 
+                    className="w-2 bg-red inline-flex px-1 m-1" 
+                    key = {idx}
+                    style={{height: `${value}px`}}></div>
             ))}
-            </>
+            </div>
+            
         );
     }
 }
